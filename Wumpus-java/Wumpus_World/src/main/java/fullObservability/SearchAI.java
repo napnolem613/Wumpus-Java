@@ -177,7 +177,7 @@ public class SearchAI extends Agent {
             {
                 cost -= 1000;
             }
-            if(board[agentX][agentY].getWumpus())
+            if(board[agentX][agentY].getWumpus() && !hasWumpus)
             {
                 cost -= 1000;
             }
@@ -334,7 +334,6 @@ public class SearchAI extends Agent {
             }
 
             while(!stack.isEmpty()){
-                System.out.println("aa");
                 System.out.println(stack.peek());
                 plan.add(stack.pop());
 
